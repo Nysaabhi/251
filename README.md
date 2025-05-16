@@ -22632,6 +22632,20 @@ function addProviderPageStyles() {
   display: none;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .cart-count {
+    min-width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+}
+
 .share-button {
   background: none;
   border: none;
