@@ -12021,7 +12021,7 @@ function addStorePageStyles() {
     font-size: 10px;
   }
 }
-  
+
 .store-content {
   padding: 0 0 100px;
   width: 100%;
@@ -22604,17 +22604,32 @@ function addProviderPageStyles() {
 
 .cart-count {
   position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #ff0000;
+  top: -4px;
+  right: -4px;
+  background: #ff3b30;
   color: white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  font-size: 0.7em;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  font-size: 11px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Make cart count visible even when empty for better layout consistency */
+.cart-button .cart-count:empty {
+  display: none;
 }
 
 .share-button {
